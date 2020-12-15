@@ -1,0 +1,27 @@
+from helium import *
+
+start_chrome('https://xxx/xx')
+go_to('https://xxx/xx')
+
+#元素宽度/高度
+Button("xxx").width
+Button("xxx").heigh
+#元素在界面上的XY轴坐标
+Button("xxx").x
+Button("xxx").y
+#元素坐上角的坐标
+Button("xxx").top_left
+#转换为web_element,之后可以调用selenium元素的属性和方法
+Button("xxx").web_element.text
+
+Text(to_right_of="xxx").value
+Text(to_right_of="xxx").exists()
+#等待某个条件为真才继续往下执行
+wait_until(Text(to_right_of="xxx").exists())
+
+#可以获取链接对应的url
+Link(to_right_of=xxx).href
+#可以获取链接的名字文本
+Link(to_right_of=xxx).web_element.text
+
+kill_browser()
