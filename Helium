@@ -19,9 +19,12 @@ Text(to_right_of="xxx").exists()
 #等待某个条件为真才继续往下执行
 wait_until(Text(to_right_of="xxx").exists())
 
-#可以获取链接对应的url
-Link(to_right_of=xxx).href
-#可以获取链接的名字文本
-Link(to_right_of=xxx).web_element.text
+#可以获取链接文件的文本（如xxxxx.pdf）
+linkname=Link(to_right_of=xxx).web_element.text
+#可以获取链接文件的url,用于下载
+url=Link(to_right_of=xxx).href
+#下载文件
+pathname=r"\\xxx\xxx\xxxxx.pdf"
+urllib.request.urlretrieve(url, pathname)
 
 kill_browser()
