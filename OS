@@ -1,0 +1,8 @@
+import os
+
+#创建文件夹路径
+os.mkdir("\\\\xxx\\xxx\\folder_name")
+os.mkdir(f"\\\\xxx\\xxx\\{folder_name}")
+
+#打开文件夹
+os.startfile("\\\\xxx\\xxx\\folder_name")
